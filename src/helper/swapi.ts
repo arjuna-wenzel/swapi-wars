@@ -44,7 +44,7 @@ export const fetchFilms = cache(async (): Promise<IFilmParsed[]> => {
 })
 
 export const fetchPeople = cache(async (): Promise<IPeople[]> => {
-    return fetchAll(url('peoples'), []).then((response) => {
+    return fetchAll(url('people'), []).then((response) => {
         return (response ? response : []) as IPeople[]
     })
 })
