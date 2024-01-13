@@ -1,18 +1,19 @@
 import {IFilm, IFilmParsed, IPeople, IPlanet, ISpecie, IStarship, ISwapiListResult, ISwapiType, IVehicle} from "@/interfaces/swapi";
-import axios from "axios";
 import {cache} from "react";
 
 /*
     Helper library for fetching all the relevant swapi data
+    Switched axios for nextjs' fetch for better cache management
     TODO implement type guards into all relevant fetching functions
     TODO map relevant children entities to their respective objects, e.g. characters in films should be mapped instead of plain url strings
     TODO support for wookie switch woooooo
  */
 
 const request = async (url: string): Promise<ISwapiListResult | null> => {
-    return axios.get<ISwapiListResult>(url).then((response) => {
-        if (response.data) {
-            return response.data;
+    return fetch(url, {cache: 'force-cache'}).then(async (response) => {
+        const data = (await response.json());
+        if (data) {
+            return data as ISwapiListResult;
         }
         return null;
     }).catch((e) => {

@@ -12,7 +12,7 @@ To start it locally you have install all the npm packages and then just run it e
 The page then should be available under http://localhost:3000.
 
 # caveats
-Performance in develop is slow.  
+Cold start performance is slow.  
 The swapi endpoint doesn't seem to have any internal cache.  
 *Also*: the documentation didn't state that the list data will be paginated, so I decided on fetching the data server side once.  
 Now I needed to fetch the list data recursively so performance took another hit in develop.  
