@@ -1,4 +1,4 @@
-import {IFilm, IFilmParsed, IPeople, IPlanet, ISpecie, IStarship, ISwapiListResult, ISwapiType, IVehicle} from "@/interfaces/swapi";
+import {IFilm, IPeople, IPlanet, ISpecie, IStarship, ISwapiListResult, ISwapiType, IVehicle} from "@/interfaces/swapi";
 import {cache} from "react";
 
 /*
@@ -32,16 +32,10 @@ const fetchAll = async (url: string, current: ISwapiType[]): Promise<ISwapiType[
 const url = (path: string) => {
     return (process.env.SWAPI_ENDPOINT ?? '') + path;
 }
-export const fetchFilms = cache(async (): Promise<IFilmParsed[]> => {
-    const unparsedFilms = await fetchAll(url('films'), []).then((response) => {
+export const fetchFilms = cache(async (): Promise<IFilm[]> => {
+    return fetchAll(url('films'), []).then((response) => {
         return (response ? response : []) as IFilm[]
     })
-
-    return unparsedFilms.map((unparsedFilm) => ({
-        ...unparsedFilm,
-        created: new Date(unparsedFilm.created),
-        release_date: new Date(unparsedFilm.release_date)
-    }))
 })
 
 export const fetchPeople = cache(async (): Promise<IPeople[]> => {
