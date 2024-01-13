@@ -1,6 +1,6 @@
 import { fetchStarships } from "@/helper/swapi";
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 export default async function Page() {
   const starships = await fetchStarships();

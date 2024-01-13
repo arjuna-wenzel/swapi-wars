@@ -15,6 +15,23 @@ export interface IFilm {
   vehicles: string[];
 }
 
+export interface IFilmMapped {
+  characters: IPeople[];
+  created: string;
+  director: string;
+  edited: string;
+  episode_id: string;
+  opening_crawl: string;
+  planets: IPlanet[];
+  producer: string;
+  release_date: string;
+  species: ISpecie[];
+  starships: IStarship[];
+  title: string;
+  url: string;
+  vehicles: IVehicle[];
+}
+
 export interface IPeople {
   birth_year: string;
   eye_color: string;

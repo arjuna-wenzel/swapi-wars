@@ -10,9 +10,9 @@ export const NavItem = (navItem: INavItem) => {
 
   const classes = useMemo(() => {
     if (pathname.startsWith(navItem.href)) {
-      return "w-full text-center py-3 hover:bg-gray-900 cursor-pointer bg-gray-900";
+      return "w-full text-center py-3 hover:bg-gray-800 cursor-pointer bg-gray-900";
     }
-    return "w-full text-center py-3 hover:bg-gray-900 cursor-pointer";
+    return "w-full text-center py-3 hover:bg-gray-800 cursor-pointer";
   }, [pathname, navItem.href]);
 
   return (

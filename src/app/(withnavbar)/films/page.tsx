@@ -1,16 +1,9 @@
 import { fetchFilms } from "@/helper/swapi";
+import FilmTable from "@/app/(withnavbar)/films/table";
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 export default async function Page() {
   const films = await fetchFilms();
-  return (
-    <ul>
-      {films.map((film) => (
-        <li key={film.url}>
-          {film.title} - {film.release_date}
-        </li>
-      ))}
-    </ul>
-  );
+  return <FilmTable films={films} />;
 }
