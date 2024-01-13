@@ -1,6 +1,6 @@
 "use client";
 
-import { IStarship, IVehicle } from "@/interfaces/swapi";
+import { IVehicle } from "@/interfaces/swapi";
 import { useMemo } from "react";
 import { ColumnDef } from "@tanstack/table-core";
 import Table from "@/components/table";

@@ -1,6 +1,6 @@
 "use client";
 
-import { IPlanet, ISpecie } from "@/interfaces/swapi";
+import { ISpecie } from "@/interfaces/swapi";
 import { useMemo } from "react";
 import { ColumnDef } from "@tanstack/table-core";
 import Table from "@/components/table";
