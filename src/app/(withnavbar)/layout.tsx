@@ -26,7 +26,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           ))}
         </div>
       </nav>
-      <main className={"relative pt-6"}>{children}</main>
+      <main className={"relative pt-6 min-h-screen"}>{children}</main>
+      <footer className={"sticky bottom-0 bg-black py-3 flex justify-between"}>
+        <span>Arjuna Wenzel</span>
+        <span>2024</span>
+      </footer>
     </div>
   );
 }

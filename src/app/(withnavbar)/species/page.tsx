@@ -1,16 +1,9 @@
 import { fetchSpecies } from "@/helper/swapi";
+import SpecieTable from "@/app/(withnavbar)/species/table";
 
 export const revalidate = 3600;
 
 export default async function Page() {
   const species = await fetchSpecies();
-  return (
-    <ul>
-      {species.map((specie) => (
-        <li key={specie.url}>
-          {specie.name} - {specie.homeworld} - {specie.language}
-        </li>
-      ))}
-    </ul>
-  );
+  return <SpecieTable species={species} />;
 }

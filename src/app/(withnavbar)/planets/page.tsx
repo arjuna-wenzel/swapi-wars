@@ -1,16 +1,9 @@
 import { fetchPlanets } from "@/helper/swapi";
+import PlanetTable from "@/app/(withnavbar)/planets/table";
 
 export const revalidate = 3600;
 
 export default async function Page() {
   const planets = await fetchPlanets();
-  return (
-    <ul>
-      {planets.map((planet) => (
-        <li key={planet.url}>
-          {planet.name} - {planet.population} - {planet.terrain}
-        </li>
-      ))}
-    </ul>
-  );
+  return <PlanetTable planets={planets} />;
 }
