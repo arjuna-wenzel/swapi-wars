@@ -8,13 +8,16 @@ const navItems: INavItem[] = [
     {label: 'Species', href: '/species'},
     {label: 'Starships', href: '/starships'},
     {label: 'Vehicles', href: '/vehicles'}]
-export default function ({
-                             children,
-                         }: {
+export default function Layout({
+                                   children,
+                               }: {
     children: React.ReactNode
 }) {
-    return <div className={"relative min-h-screen w-full flex flex-col gap-6"}>
-        <div className={"flex justify-evenly"}>{navItems.map((navItem) => <NavItem label={navItem.label} href={navItem.href} key={navItem.href}/>)}</div>
-        <main className={""}>{children}</main>
+    return <div className={"xl:px-12"}>
+        <header className={'flex items-center justify-center py-12 text-2xl'}>Swapi Wars</header>
+        <nav className={"z-50 sticky top-0 bg-black"}>
+            <div className={'flex flex-col md:flex-row justify-between'}>{navItems.map((navItem) => <NavItem label={navItem.label} href={navItem.href} key={navItem.href}/>)}</div>
+        </nav>
+        <main className={"relative pt-6"}>{children}</main>
     </div>
 }
