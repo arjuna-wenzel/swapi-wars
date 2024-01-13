@@ -18,6 +18,8 @@ To start it locally you have installed all the npm packages and then just run it
 the production version first call `npm run build` followed by `npm run start`.  
 The page then should be available under http://localhost:3000.
 
+Keep in mind that building the app fetches all necessary data to display the static sites from the api already.
+
 # caveats
 
 Cold start performance is slow.  
