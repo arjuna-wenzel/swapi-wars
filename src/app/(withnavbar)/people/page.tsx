@@ -1,4 +1,4 @@
-import {fetchFilms, fetchPeople} from "@/helper/swapi";
+import {fetchPeople} from "@/helper/swapi";
 
 export const revalidate = 60;
 
