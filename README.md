@@ -23,12 +23,13 @@ Keep in mind that building the app fetches all necessary data to display the sta
 
 # caveats
 
-Cold start performance can be slow sometimes, the endpoint seems to be overloaded from time to time.  
+Cold start performance can be slow, the endpoint seems to be overloaded from time to time.  
 The swapi endpoint doesn't seem to have any internal cache.  
 *Also*: the documentation didn't state that the list data will be paginated, so I decided on fetching the data server
 side once.  
 Now I needed to fetch the list data recursively so performance took another hit in develop.  
-With that in mind I'd rather use client side fetching with tanstack queries + paginated tables now.
 
-I'd love to display the nested object arrays as real data instead of just a count integer, either as modal on click in
-table or as an in table component, but time is not on my side
+I'd love to display the nested object arrays as real data instead of just a count integer, either as ssr modal on click in
+table or as a ssr in table component, but time is not on my side.
+The Quick & Dirty way would be to just fetch all entity lists that the respective parent entity hosts as children to map everything directly, 
+but that'd be a huge performance hit.
