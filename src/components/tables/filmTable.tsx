@@ -50,23 +50,23 @@ export default function FilmTable({ films }: { films: IFilm[] }) {
           new Date(originalRow.edited).toLocaleDateString(),
       },
       {
-        header: "Characters count",
+        header: "Character count",
         accessorFn: (originalRow) => originalRow.characters.length,
       },
       {
-        header: "Planets count",
+        header: "Planet count",
         accessorFn: (originalRow) => originalRow.planets.length,
       },
       {
-        header: "Species count",
+        header: "Specie count",
         accessorFn: (originalRow) => originalRow.species.length,
       },
       {
-        header: "Starships count",
+        header: "Starship count",
         accessorFn: (originalRow) => originalRow.starships.length,
       },
       {
-        header: "Vehicles count",
+        header: "Vehicle count",
         accessorFn: (originalRow) => originalRow.vehicles.length,
       },
     ],

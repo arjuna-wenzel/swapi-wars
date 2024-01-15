@@ -13,7 +13,7 @@ export const NavItem = (navItem: INavItem) => {
       return "w-full text-center py-3 hover:bg-gray-800 cursor-pointer bg-gray-900";
     }
     return "w-full text-center py-3 hover:bg-gray-800 cursor-pointer";
-  }, [pathname, navItem.href]);
+  }, [navItem.href, pathname]);
 
   return (
     <Link href={navItem.href} className={classes} key={navItem.href}>

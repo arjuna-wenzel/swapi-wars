@@ -59,15 +59,15 @@ export default function PeopleTable({ people }: { people: IPeople[] }) {
         accessorFn: (originalRow) => originalRow.films.length,
       },
       {
-        header: "Species count",
+        header: "Specie count",
         accessorFn: (originalRow) => originalRow.species.length,
       },
       {
-        header: "Starships count",
+        header: "Starship count",
         accessorFn: (originalRow) => originalRow.starships.length,
       },
       {
-        header: "Vehicles count",
+        header: "Vehicle count",
         accessorFn: (originalRow) => originalRow.vehicles.length,
       },
     ],
