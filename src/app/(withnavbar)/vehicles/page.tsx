@@ -1,4 +1,4 @@
-import { fetchVehicles } from '@/helper/swapi';
+import { fetchVehicles } from '@/services/swapi';
 import VehicleTable from '@/components/tables/vehicleTable';
 
 export const revalidate = 3600;

@@ -1,4 +1,4 @@
-import { fetchPeople, fetchPlanets } from '@/helper/swapi';
+import { fetchPeople, fetchPlanets } from '@/services/swapi';
 import PeopleTable from '@/components/tables/peopleTable';
 import { IPeople } from '@/interfaces/swapi';
 

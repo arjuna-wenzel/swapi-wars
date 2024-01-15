@@ -1,4 +1,4 @@
-import { fetchStarships } from '@/helper/swapi';
+import { fetchStarships } from '@/services/swapi';
 import StarshipTable from '@/components/tables/starshipTable';
 
 export const revalidate = 3600;

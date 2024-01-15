@@ -1,4 +1,4 @@
-import { fetchPlanets, fetchSpecies } from '@/helper/swapi';
+import { fetchPlanets, fetchSpecies } from '@/services/swapi';
 import SpecieTable from '@/components/tables/speciesTable';
 import { ISpecie } from '@/interfaces/swapi';
 

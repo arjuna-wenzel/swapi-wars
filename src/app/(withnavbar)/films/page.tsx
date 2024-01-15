@@ -1,4 +1,4 @@
-import { fetchFilms } from '@/helper/swapi';
+import { fetchFilms } from '@/services/swapi';
 import FilmTable from '@/components/tables/filmTable';
 
 export const revalidate = 3600;
