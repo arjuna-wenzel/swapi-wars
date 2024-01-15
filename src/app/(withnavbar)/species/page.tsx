@@ -1,6 +1,6 @@
-import { fetchPlanets, fetchSpecies } from "@/helper/swapi";
-import SpecieTable from "@/components/tables/speciesTable";
-import { ISpecie } from "@/interfaces/swapi";
+import { fetchPlanets, fetchSpecies } from '@/helper/swapi';
+import SpecieTable from '@/components/tables/speciesTable';
+import { ISpecie } from '@/interfaces/swapi';
 
 export const revalidate = 3600;
 

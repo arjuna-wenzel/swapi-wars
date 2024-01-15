@@ -1,73 +1,73 @@
-"use client";
+'use client';
 
-import { IPeople } from "@/interfaces/swapi";
-import React, { useMemo } from "react";
-import { ColumnDef } from "@tanstack/table-core";
-import GenericTable from "@/components/tables/genericTable";
+import { IPeople } from '@/interfaces/swapi';
+import React, { useMemo } from 'react';
+import { ColumnDef } from '@tanstack/table-core';
+import GenericTable from '@/components/tables/genericTable';
 
 export default function PeopleTable({ people }: { people: IPeople[] }) {
   const peopleColumns = useMemo<ColumnDef<IPeople>[]>(
     () => [
       {
-        header: "Name",
-        accessorKey: "name",
+        header: 'Name',
+        accessorKey: 'name',
       },
       {
-        header: "Birth Year",
-        accessorKey: "birth_year",
+        header: 'Birth Year',
+        accessorKey: 'birth_year',
       },
       {
-        header: "Eye Color",
-        accessorKey: "eye_color",
+        header: 'Eye Color',
+        accessorKey: 'eye_color',
       },
       {
-        header: "Gender",
-        accessorKey: "gender",
+        header: 'Gender',
+        accessorKey: 'gender',
       },
       {
-        header: "Hair Color",
-        accessorKey: "hair_color",
+        header: 'Hair Color',
+        accessorKey: 'hair_color',
       },
       {
-        header: "Height",
-        accessorKey: "height",
+        header: 'Height',
+        accessorKey: 'height',
       },
       {
-        header: "Homeworld",
-        accessorKey: "homeworld",
+        header: 'Homeworld',
+        accessorKey: 'homeworld',
       },
       {
-        header: "Mass",
-        accessorKey: "mass",
+        header: 'Mass',
+        accessorKey: 'mass',
       },
       {
-        header: "Skin Color",
-        accessorKey: "skin_color",
+        header: 'Skin Color',
+        accessorKey: 'skin_color',
       },
       {
-        header: "Created",
+        header: 'Created',
         accessorFn: (originalRow) =>
           new Date(originalRow.created).toLocaleDateString(),
       },
       {
-        header: "Edited",
+        header: 'Edited',
         accessorFn: (originalRow) =>
           new Date(originalRow.edited).toLocaleDateString(),
       },
       {
-        header: "Film count",
+        header: 'Film count',
         accessorFn: (originalRow) => originalRow.films.length,
       },
       {
-        header: "Specie count",
+        header: 'Specie count',
         accessorFn: (originalRow) => originalRow.species.length,
       },
       {
-        header: "Starship count",
+        header: 'Starship count',
         accessorFn: (originalRow) => originalRow.starships.length,
       },
       {
-        header: "Vehicle count",
+        header: 'Vehicle count',
         accessorFn: (originalRow) => originalRow.vehicles.length,
       },
     ],
@@ -80,7 +80,7 @@ export default function PeopleTable({ people }: { people: IPeople[] }) {
       data={people}
       defaultSort={[
         {
-          id: "name",
+          id: 'name',
           desc: false,
         },
       ]}

@@ -9,7 +9,8 @@ webpage.
 
 # how does it work
 
-It is a TypeScript based NextJS application that uses server side rendering combined with axios to connect to the
+It is a TypeScript based Next.js application that uses server side rendering combined with Next.js' fetch 
+(so we can use its caching implementation) to connect to the
 endpoint itself and tanstack tables to display said data.
 
 # how can I start it
@@ -22,11 +23,12 @@ Keep in mind that building the app fetches all necessary data to display the sta
 
 # caveats
 
-Cold start performance is slow.  
+Cold start performance can be slow sometimes, the endpoint seems to be overloaded from time to time.  
 The swapi endpoint doesn't seem to have any internal cache.  
 *Also*: the documentation didn't state that the list data will be paginated, so I decided on fetching the data server
 side once.  
 Now I needed to fetch the list data recursively so performance took another hit in develop.  
 With that in mind I'd rather use client side fetching with tanstack queries + paginated tables now.
+
 I'd love to display the nested object arrays as real data instead of just a count integer, either as modal on click in
 table or as an in table component, but time is not on my side

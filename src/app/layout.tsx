@@ -1,23 +1,23 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Swapi Wars",
-  description: "An integration of the famous swapi endpoint.",
-  icons: ["./favicon.ico"],
+  title: 'Swapi Wars',
+  description: 'An integration of the famous swapi endpoint.',
+  icons: ['./favicon.ico'],
 };
 
 export default function RootLayout({
-  children,
-}: {
+                                     children,
+                                   }: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} overflow-y-scroll`}>{children}</body>
+    <body className={`${inter.className} overflow-y-scroll`}>{children}</body>
     </html>
   );
 }

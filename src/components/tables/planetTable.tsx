@@ -1,65 +1,65 @@
-"use client";
+'use client';
 
-import { IPlanet } from "@/interfaces/swapi";
-import { useMemo } from "react";
-import { ColumnDef } from "@tanstack/table-core";
-import GenericTable from "@/components/tables/genericTable";
+import { IPlanet } from '@/interfaces/swapi';
+import { useMemo } from 'react';
+import { ColumnDef } from '@tanstack/table-core';
+import GenericTable from '@/components/tables/genericTable';
 
 export default function PlanetTable({ planets }: { planets: IPlanet[] }) {
   const planetColumns = useMemo<ColumnDef<IPlanet>[]>(
     () => [
       {
-        header: "Name",
-        accessorKey: "name",
+        header: 'Name',
+        accessorKey: 'name',
       },
       {
-        header: "Climate",
-        accessorKey: "climate",
+        header: 'Climate',
+        accessorKey: 'climate',
       },
       {
-        header: "Diameter",
-        accessorKey: "diameter",
+        header: 'Diameter',
+        accessorKey: 'diameter',
       },
       {
-        header: "Gravity",
-        accessorKey: "gravity",
+        header: 'Gravity',
+        accessorKey: 'gravity',
       },
       {
-        header: "Orbital Period",
-        accessorKey: "orbital_period",
+        header: 'Orbital Period',
+        accessorKey: 'orbital_period',
       },
       {
-        header: "Population",
-        accessorKey: "population",
+        header: 'Population',
+        accessorKey: 'population',
       },
       {
-        header: "Rotation Period",
-        accessorKey: "rotation_period",
+        header: 'Rotation Period',
+        accessorKey: 'rotation_period',
       },
       {
-        header: "Surface Water",
-        accessorKey: "surface_water",
+        header: 'Surface Water',
+        accessorKey: 'surface_water',
       },
       {
-        header: "Terrain",
-        accessorKey: "terrain",
+        header: 'Terrain',
+        accessorKey: 'terrain',
       },
       {
-        header: "Created",
+        header: 'Created',
         accessorFn: (originalRow) =>
           new Date(originalRow.created).toLocaleDateString(),
       },
       {
-        header: "Edited",
+        header: 'Edited',
         accessorFn: (originalRow) =>
           new Date(originalRow.edited).toLocaleDateString(),
       },
       {
-        header: "Film count",
+        header: 'Film count',
         accessorFn: (originalRow) => originalRow.films.length,
       },
       {
-        header: "Resident count",
+        header: 'Resident count',
         accessorFn: (originalRow) => originalRow.residents.length,
       },
     ],
@@ -72,7 +72,7 @@ export default function PlanetTable({ planets }: { planets: IPlanet[] }) {
       data={planets}
       defaultSort={[
         {
-          id: "name",
+          id: 'name',
           desc: false,
         },
       ]}
