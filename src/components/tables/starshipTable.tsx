@@ -1,12 +1,16 @@
 "use client";
 
-import { IVehicle } from "@/interfaces/swapi";
+import { IStarship } from "@/interfaces/swapi";
 import { useMemo } from "react";
 import { ColumnDef } from "@tanstack/table-core";
-import Table from "@/components/table";
+import GenericTable from "@/components/tables/genericTable";
 
-export default function VehicleTable({ vehicles }: { vehicles: IVehicle[] }) {
-  const vehicleColumns = useMemo<ColumnDef<IVehicle>[]>(
+export default function StarshipTable({
+  starships,
+}: {
+  starships: IStarship[];
+}) {
+  const starshipColumns = useMemo<ColumnDef<IStarship>[]>(
     () => [
       {
         header: "Name",
@@ -49,8 +53,16 @@ export default function VehicleTable({ vehicles }: { vehicles: IVehicle[] }) {
         accessorKey: "consumables",
       },
       {
-        header: "Vehicle Class",
-        accessorKey: "vehicle_class",
+        header: "Hyperdrive Rating",
+        accessorKey: "hyperdrive_rating",
+      },
+      {
+        header: "MGLT",
+        accessorKey: "MGLT",
+      },
+      {
+        header: "Starship Class",
+        accessorKey: "starship_class",
       },
       {
         header: "Created",
@@ -63,7 +75,7 @@ export default function VehicleTable({ vehicles }: { vehicles: IVehicle[] }) {
           new Date(originalRow.edited).toLocaleDateString(),
       },
       {
-        header: "Planet count",
+        header: "Film count",
         accessorFn: (originalRow) => originalRow.films.length,
       },
       {
@@ -75,9 +87,9 @@ export default function VehicleTable({ vehicles }: { vehicles: IVehicle[] }) {
   );
 
   return (
-    <Table
-      columnDef={vehicleColumns as ColumnDef<unknown>[]}
-      data={vehicles}
+    <GenericTable
+      columnDef={starshipColumns as ColumnDef<unknown>[]}
+      data={starships}
       defaultSort={[
         {
           id: "name",

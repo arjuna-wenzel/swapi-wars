@@ -3,7 +3,7 @@
 import { IFilm } from "@/interfaces/swapi";
 import { useMemo } from "react";
 import { ColumnDef } from "@tanstack/table-core";
-import Table from "@/components/table";
+import GenericTable from "@/components/tables/genericTable";
 
 export default function FilmTable({ films }: { films: IFilm[] }) {
   const filmColumns = useMemo<ColumnDef<IFilm>[]>(
@@ -74,7 +74,7 @@ export default function FilmTable({ films }: { films: IFilm[] }) {
   );
 
   return (
-    <Table
+    <GenericTable
       columnDef={filmColumns as ColumnDef<unknown>[]}
       data={films}
       defaultSort={[

@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortUp } from "@fortawesome/free-solid-svg-icons/faSortUp";
 import { faSortDown } from "@fortawesome/free-solid-svg-icons/faSortDown";
 
-export default function Table({
+export default function GenericTable({
   data,
   columnDef,
   defaultSort,

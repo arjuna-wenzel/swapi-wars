@@ -1,9 +1,9 @@
 "use client";
 
 import { IPeople } from "@/interfaces/swapi";
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import { ColumnDef } from "@tanstack/table-core";
-import Table from "@/components/table";
+import GenericTable from "@/components/tables/genericTable";
 
 export default function PeopleTable({ people }: { people: IPeople[] }) {
   const peopleColumns = useMemo<ColumnDef<IPeople>[]>(
@@ -75,7 +75,7 @@ export default function PeopleTable({ people }: { people: IPeople[] }) {
   );
 
   return (
-    <Table
+    <GenericTable
       columnDef={peopleColumns as ColumnDef<unknown>[]}
       data={people}
       defaultSort={[

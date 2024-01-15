@@ -1,5 +1,5 @@
 import { fetchPeople } from "@/helper/swapi";
-import PeopleTable from "@/app/(withnavbar)/people/table";
+import PeopleTable from "@/components/tables/peopleTable";
 
 export const revalidate = 3600;
 

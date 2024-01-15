@@ -1,5 +1,5 @@
 import { fetchFilms } from "@/helper/swapi";
-import FilmTable from "@/app/(withnavbar)/films/table";
+import FilmTable from "@/components/tables/filmTable";
 
 export const revalidate = 3600;
 

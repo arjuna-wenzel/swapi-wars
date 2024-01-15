@@ -1,5 +1,5 @@
 import { fetchSpecies } from "@/helper/swapi";
-import SpecieTable from "@/app/(withnavbar)/species/table";
+import SpecieTable from "@/components/tables/speciesTable";
 
 export const revalidate = 3600;
 

@@ -1,5 +1,5 @@
 import { fetchStarships } from "@/helper/swapi";
-import StarshipTable from "@/app/(withnavbar)/starships/table";
+import StarshipTable from "@/components/tables/starshipTable";
 
 export const revalidate = 3600;
 

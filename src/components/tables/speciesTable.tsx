@@ -3,7 +3,7 @@
 import { ISpecie } from "@/interfaces/swapi";
 import { useMemo } from "react";
 import { ColumnDef } from "@tanstack/table-core";
-import Table from "@/components/table";
+import GenericTable from "@/components/tables/genericTable";
 
 export default function SpecieTable({ species }: { species: ISpecie[] }) {
   const specieColumns = useMemo<ColumnDef<ISpecie>[]>(
@@ -71,7 +71,7 @@ export default function SpecieTable({ species }: { species: ISpecie[] }) {
   );
 
   return (
-    <Table
+    <GenericTable
       columnDef={specieColumns as ColumnDef<unknown>[]}
       data={species}
       defaultSort={[

@@ -1,5 +1,5 @@
 import { fetchPlanets } from "@/helper/swapi";
-import PlanetTable from "@/app/(withnavbar)/planets/table";
+import PlanetTable from "@/components/tables/planetTable";
 
 export const revalidate = 3600;
 
