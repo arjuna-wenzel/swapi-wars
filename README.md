@@ -15,7 +15,7 @@ endpoint itself and tanstack tables to display said data.
 
 # how can I start it
 
-To start it locally you have installed all the npm packages and then just run it either with `npm run dev` or if you want
+To start it locally you have to install all the npm packages and then just run it either with `npm run dev` or if you want
 the production version first call `npm run build` followed by `npm run start`.  
 The page then should be available under http://localhost:3000.
 
